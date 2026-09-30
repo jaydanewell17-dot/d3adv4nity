@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090909" />
+  <meta name="description" content="d3adv4nity — personal internet shrine" />
+  <title>d3adv4nity — personal internet shrine</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="crt-noise" aria-hidden="true"></div>
+  <div class="site-wrap">
+    <header class="site-header panel">
+      <div class="brand-block">
+        <div class="brand">d3adv4nity</div>
+        <div class="tagline" data-site="tagline">personal internet shrine</div>
+      </div>
+      <div class="status-stack">
+        <div><span class="label">status</span> <span class="accent">online</span></div>
+        <div><span class="label">listening</span> <span data-site="currently-listening">—</span></div>
+      </div>
+    </header>
+
+    <nav class="main-nav panel" aria-label="Main navigation">
+      <a class="active" href="index.html">home</a>
+      <a href="pages/about.html">about</a>
+      <a href="pages/diary.html">diary</a>
+      <a href="pages/media.html">media</a>
+      <a href="pages/music.html">music</a>
+      <a href="pages/favorites.html">favorites</a>
+      <a href="pages/guestbook.html">guestbook</a>
+    </nav>
+
+    <main class="home-grid">
+      <aside class="sidebar">
+        <section class="panel profile-card">
+          <div class="section-title">about me</div>
+          <div class="profile-mini">
+            <div class="profile-placeholder">d3a</div>
+            <div>
+              <div class="profile-name" data-site="display-name">d3adv4nity</div>
+              <p data-site="mini-bio">a little corner of the internet made by me, for me.</p>
+              <a href="pages/about.html">read more →</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="section-title">currently</div>
+          <ul class="current-list">
+            <li><span>watching</span><b data-site="currently-watching">—</b></li>
+            <li><span>reading</span><b data-site="currently-reading">—</b></li>
+            <li><span>listening</span><b data-site="currently-listening">—</b></li>
+            <li><span>mood</span><b data-site="mood">—</b></li>
+          </ul>
+        </section>
+
+        <section class="panel site-update">
+          <div class="section-title">site update</div>
+          <div class="update-date" data-site="update-date">09.30.26</div>
+          <p data-site="site-update">welcome to the first version of my shrine.</p>
+        </section>
+      </aside>
+
+      <section class="content-column">
+        <section class="hero-panel panel">
+          <div class="hero-kicker">welcome</div>
+          <h1 data-site="welcome-title">you found my little corner of the internet.</h1>
+          <p data-site="welcome-copy">this is a personal archive of things i like, things i make, things i watch, and things i think about.</p>
+          <div class="rule"></div>
+          <div class="hero-links">
+            <a href="pages/diary.html">read my diary</a>
+            <a href="pages/music.html">enter the music room</a>
+            <a href="pages/favorites.html">see what i'm into</a>
+          </div>
+        </section>
+
+        <section class="two-col">
+          <article class="panel">
+            <div class="section-title">latest diary entry</div>
+            <div class="entry-date" data-latest="date">09.30.26</div>
+            <h2 data-latest="title">welcome to my shrine</h2>
+            <p data-latest="excerpt">the first entry will appear here once the diary is connected.</p>
+            <a href="pages/diary.html" class="more-link">open diary →</a>
+          </article>
+
+          <article class="panel now-playing">
+            <div class="section-title">now playing</div>
+            <div class="player-shell">
+              <div class="album-art" data-site="album-art">d3a</div>
+              <div class="track-info">
+                <div class="track-title" data-site="track-title">nothing playing yet</div>
+                <div class="track-artist" data-site="track-artist">upload a song in admin</div>
+                <div class="progress"><span></span></div>
+                <div class="player-actions">
+                  <button type="button" disabled aria-label="Previous">◀◀</button>
+                  <button type="button" disabled class="play-btn" aria-label="Play">▶</button>
+                  <button type="button" disabled aria-label="Next">▶▶</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel quote-panel">
+          <div class="section-title">one more thing</div>
+          <p class="quote" data-site="quote">“the internet should feel like a place you can get lost in.”</p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer panel">
+      <span>© <span data-site="footer-year">2026</span> d3adv4nity</span>
+      <span>built from scratch</span>
+    </footer>
+  </div>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

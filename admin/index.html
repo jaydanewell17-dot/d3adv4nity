@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>admin — d3adv4nity</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .admin-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:10px;margin-top:10px}.admin-nav{padding:12px}.admin-nav a{display:block;padding:10px 9px;border-bottom:1px solid #242424;font-size:.8rem;color:#aaa}.admin-nav a.active{color:#eee;background:#181818;box-shadow:inset 2px 0 0 #a9222d}.admin-main{padding:22px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.7rem;color:#777;text-transform:uppercase;letter-spacing:.12em}.field input,.field textarea,.field select{background:#0b0b0b;border:1px solid #353535;color:#eee;padding:10px;font:inherit}.field textarea{min-height:130px;resize:vertical}.admin-note{color:#8e8e8e;font-size:.78rem;margin-top:14px}.btn{margin-top:15px;background:#1a1a1a;border:1px solid #4a4a4a;color:#ddd;padding:10px 14px;cursor:pointer}.btn:hover{border-color:#a9222d}.admin-grid{display:grid;gap:10px}.card{border:1px solid #2d2d2d;padding:15px;background:#101010}.card h2{font-size:1rem;font-weight:normal;margin:0 0 5px}.card p{margin:0;color:#8e8e8e;font-size:.8rem}
+    @media(max-width:780px){.admin-layout{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+<header class="site-header panel"><div><div class="brand">d3adv4nity</div><div class="tagline">private admin</div></div></header>
+<div class="admin-layout">
+  <aside class="panel admin-nav">
+    <a class="active" href="#dashboard">dashboard</a>
+    <a href="#homepage">homepage</a>
+    <a href="#about">about</a>
+    <a href="#diary">diary</a>
+    <a href="#media">media</a>
+    <a href="#music">music</a>
+    <a href="#favorites">favorites</a>
+    <a href="#guestbook">guestbook</a>
+    <a href="#settings">site settings</a>
+  </aside>
+  <main class="panel admin-main" id="dashboard">
+    <div class="section-title">dashboard</div>
+    <h1 style="font-weight:normal;margin:0 0 8px">control center</h1>
+    <p style="color:#9c9794;margin-top:0">Shell only for now. Authentication, Supabase tables, storage buckets, and real save/upload actions are the next layer.</p>
+    <div class="admin-grid" style="margin-top:16px">
+      <div class="card"><h2>homepage</h2><p>Edit all visible homepage text, status, currently section, and featured content.</p></div>
+      <div class="card"><h2>content</h2><p>Manage diary, media, music, favorites, and guestbook from one account.</p></div>
+      <div class="card"><h2>music uploads</h2><p>Upload MP3 files and album art into Supabase Storage. Track data will live in the database.</p></div>
+    </div>
+    <div class="section-title" style="margin-top:25px">homepage editor preview</div>
+    <div class="form-grid">
+      <div class="field"><label>display name</label><input value="d3adv4nity" /></div>
+      <div class="field"><label>tagline</label><input value="personal internet shrine" /></div>
+      <div class="field"><label>currently watching</label><input placeholder="—" /></div>
+      <div class="field"><label>currently reading</label><input placeholder="—" /></div>
+      <div class="field"><label>currently listening</label><input placeholder="—" /></div>
+      <div class="field"><label>mood</label><input placeholder="—" /></div>
+      <div class="field full"><label>welcome copy</label><textarea>this is a personal archive of things i like, things i make, things i watch, and things i think about.</textarea></div>
+    </div>
+    <button class="btn" type="button" disabled>save (supabase not connected yet)</button>
+    <div class="admin-note">This preview intentionally does not store changes yet. We will wire the controls to your authenticated Supabase account in the next build step.</div>
+  </main>
+</div>
+</div>
+</body>
+</html>
